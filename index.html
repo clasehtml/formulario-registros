@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulario de registros</title>
+    <style>
+      body{
+        background: black;
+        color: white;
+        font-size: 32px;
+        font-family: monospace;
+      }
+      
+      h1, p {
+        text-align: center;
+      }
+      
+      button, input{
+        font-size: 32px;
+      }
+      
+      input{
+        color:green;
+      }
+      
+      .formulario{
+        width: 960px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+  <h1>Formulario de Registro de Usuario</h1>
+  <div class="formulario">
+  <form>
+      <label for="nombre">Nombre de usuario: </label><br>
+      <input type="text" name="nombre" id="nombre" size="20" maxlength="15">
+      <br><br>
+
+      <label for="edad">Edad: </label><br>
+      <input type="number" name="edad" id="edad" min="18" max="100">
+      <br><br>
+
+      <label for="correo">Correo electrónico: </label><br>
+      <input type="email" name="correo" id="correo">
+      <br><br>
+
+      <label for="contrasena">Contraseña: </label><br>
+      <input type="password" name="contrasena" id="contrasena" size="36" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d){8,}"
+             placeholder="Utiliza una contraseña de 8 caracteres o más, con mayuscula, minuscula, numero." >
+      <br><br>
+
+      <label for="cumpleanos">Cumpleaños: </label><br>
+      <input type="date" name="cumpleanos" id="cumpleanos" step="1" placeholder="aaaa/mm/dd">
+      <br><br>
+
+      <label for="nacionalidad">Nacionalidad: </label><br>
+      <input list="nacionalidades" name="nacionalidad" id="nacionalidad">
+      <br><br>
+
+      <label for="telefono">Número de teléfono: </label><br>
+      <input type="tel" name="telefono" id="telefono" size="25" placeholder="Ejemplo: +86 123 45 67 89" autocomplete="tel">
+      <br><br>
+
+      <button type="submit">Enviar</button>
+
+      <datalist id="nacionalidades">
+        <option value="India">
+        <option value="China">
+        <option value="Estados Unidos">
+        <option value="Indonesia">
+        <option value="Pakistan">
+        <option value="Nigeria">
+        <option value="Brazil">
+      </datalist>
+
+    </form>
+  </div>
+  </body>
+</html>
